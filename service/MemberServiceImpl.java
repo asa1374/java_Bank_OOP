@@ -38,10 +38,14 @@ public class MemberServiceImpl implements MemberService{
 		}
 		System.out.println(same);
 		MemberBean[] members = new MemberBean[same];
-		for(int i=0,j=0;i<count;i++) {
+		int j=0;
+		for(int i=0;i<count;i++) {
 			if(beans[i].getName().equals(name)) {
 				members[j] = beans[i];
 				j++;
+				if(j==members.length) {
+					break;
+				}
 			}
 		}
 		return members;

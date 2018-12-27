@@ -1,4 +1,6 @@
 package service;
+import java.util.ArrayList;
+
 /**
  * @author Lee Chang Jun
  * @date 2018. 12. 26.
@@ -6,13 +8,19 @@ package service;
  */
 import domain.AccountBean;
 public interface AccountService {
+	//create
 	public void createAccount(int money);
-	public AccountBean[] findAll();
+	public String createAccountNum();    //계좌번호 생성
+	//read
+	public ArrayList<AccountBean> findAll();
 	public AccountBean findByAccountNum(String accountNum);
 	public int countAccount();
-	public boolean existAccount(String accountNum);
-	public void depositMoney(int money);
-	public void withdrawMoney(int money);
+	public String findDate();			//날짜 가져오기
+	//update
+	public void depositMoney(String accountNum, int money);
+	public void withdrawMoney(String accountNum,int money);
+	//delete
 	public void deleteAccountNum(String accountNum);
+	
 	
 }

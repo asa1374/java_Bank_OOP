@@ -28,7 +28,7 @@ public class AccountBean {
 	}
 	@Override
 	public String toString() {
-		return "계좌정보 [accountNum=" + accountNum + ", today=" + today + ", money=" + money + "]";
+		return "계좌정보 [계좌번호=" + accountNum + ", 생성날짜=" + today + ", 잔액=" + money + "]\n";
 	}
 
 }
