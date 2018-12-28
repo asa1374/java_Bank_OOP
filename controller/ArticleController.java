@@ -6,7 +6,7 @@ import service.ArticleService;
 import service.ArticleServiceImpl;
 
 public class ArticleController {
-	public static void main(String[] args) {
+	public void start() {
 		ArticleService articleService = new ArticleServiceImpl();
 		while(true) {
 			switch(JOptionPane.showInputDialog("0.종료\n1.게시글작성\n2.모든게시글\n3.작성자별검색\n4.제목별검색\n5.게시글수\n"
